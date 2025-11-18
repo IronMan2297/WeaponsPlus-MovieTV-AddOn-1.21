@@ -19,6 +19,9 @@ group = mod_group_id
 
 repositories {
     // Add here additional repositories if required by some of the dependencies below.
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 base {
@@ -112,6 +115,7 @@ configurations {
 }
 
 dependencies {
+    implementation name: "weaponsplusmod-1.0.1-1.21"
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
